@@ -1,7 +1,21 @@
 // Assignment 1: Blacksmith — The Tiny Forge
 
 // PLAN: Write a short pseudocode plan for making a sword here.
+    // FUCTION makeSword() 
+    /* IF heat is greater than or equal to 30 THEN 
+        subtract 30 from heat 
+        add 1 to sword
+        display a success message 
 
+        ELSE 
+        display a message saying more heat is needed
+        END IF 
+
+        update forge display 
+
+        END FUCTION
+    
+    */
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
 
