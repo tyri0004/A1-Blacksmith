@@ -112,5 +112,5 @@ function makeSword(){
     updateForge();
 }
 // 8. Call resetForge() once to start the game.
-
+resetForge()
 // Use the tests in ASSIGNMENT.md to check your work.
