@@ -1,14 +1,14 @@
 // Assignment 1: Blacksmith — The Tiny Forge
 
 // PLAN: Write a short pseudocode plan for making a sword here.
-    // FUCTION makeSword() 
+    // FUNCTION makeSword() 
     /* IF heat is greater than or equal to 30 THEN 
-        subtract 30 from heat 
-        add 1 to sword
-        display a success message 
+         subtract 30 from heat 
+         add 1 to swords
+         display a success message 
 
         ELSE 
-        display a message saying more heat is needed
+            display a message saying more heat is needed
         END IF 
 
         update forge display 
@@ -18,6 +18,14 @@
     */
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
+
+const $forge = document.getElementById("forge")
+const $heatValue = document.getElementById("heat-value")
+const $swordCount = document.getElementById("sword-count")
+const $forgeStatus = document.getElementById("forge-status")
+const $forgeImage = document.getElementById("forge-image")
+const $actionMessage = document.getElementById("action-message")
+
 
 // 2. Create the two state variables: heat and swords made.
 
