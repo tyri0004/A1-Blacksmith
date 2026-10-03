@@ -43,11 +43,44 @@ function getForgeStatus(heatValue){
     }
 }
 // 4. Write updateForge(). Update text and apply one status class.
+function updateForge(){
+    $heatValue.textContent = heat; 
+    $swordCount.textContent = swords; 
+
+    const status = getForgeStatus(heat);
+    $forgeStatus.textContent = status;
+
+    $forge.classList.remove("is-cold", "is-ready", "is-roaring");
+
+    if (heat < 30){
+        $forge.classList.add("is-cold");
+        $forgeImage.src = "assets/forge-cold.svg";
+        $forgeImage.alt = "A stone forge with no flames"
+    }
+    else if(heat < 70){
+        $forge.classList.add("is-ready");
+        $forgeImage.src = "assets/forge-ready.svg";
+        $forgeImage.alt = "A stone forge with a small fire"
+    }
+    else{
+        $forge.classList.add("is-roaring"); 
+        $forgeImage.src = "assets/forge-roaring.svg";
+        $forgeImage.alt = "A stone forget with  a roaring fire"
+    }
+}
 //    Change the supplied forge image src and alt to match the heat.
+
 //    Keep the most recent action message visible.
 
 // 5. Write resetForge(). Restore the state, message, and display.
+    function resetForge(){
+        heat = 20;
+        swords = 0; 
 
+        $actionMessage.textContent = "Welcome to the forge. Add heat to begin";
+
+        
+    }
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
