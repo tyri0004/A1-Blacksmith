@@ -73,18 +73,34 @@ function updateForge(){
 //    Keep the most recent action message visible.
 
 // 5. Write resetForge(). Restore the state, message, and display.
-    function resetForge(){
-        heat = 20;
-        swords = 0; 
+function resetForge(){
+    heat = 20;
+    swords = 0; 
 
-        $actionMessage.textContent = "Welcome to the forge. Add heat to begin";
+    $actionMessage.textContent = "Welcome to the forge. Add heat to begin";
 
-        
-    }
+    updateForge();
+
+}
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
+function heatForge(amount){
+
+    heat += amount; 
+
+    if(heat > 100){
+        heat = 100
+    };
+
+    $actionMessage.textContent = "The forge has been heated.";
+
+    updateForge()
+}
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 
+function makeSword(){
+    
+}
 // 8. Call resetForge() once to start the game.
 
 // Use the tests in ASSIGNMENT.md to check your work.
