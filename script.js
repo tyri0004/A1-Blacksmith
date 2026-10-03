@@ -28,9 +28,20 @@ const $actionMessage = document.getElementById("action-message")
 
 
 // 2. Create the two state variables: heat and swords made.
-
+let heat = 20 
+let swords = 0 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
-
+function getForgeStatus(heatValue){
+    if(heatValue < 30){
+        return "Too Cold."
+    }
+    else if(heatValue < 70){
+        return "Ready to forge!"
+    }
+    else{
+        return "Roaring fire!"
+    }
+}
 // 4. Write updateForge(). Update text and apply one status class.
 //    Change the supplied forge image src and alt to match the heat.
 //    Keep the most recent action message visible.
