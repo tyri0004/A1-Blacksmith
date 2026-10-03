@@ -99,10 +99,9 @@ function heatForge(amount){
 // 7. Write makeSword(). Handle both success and insufficient heat.
 
 function makeSword(){
-    if (heat <= 30){
+    if (heat >= 30){
         heat -= 30; 
-        sword += 1; 
-
+        swords += 1; 
         $actionMessage.textContent = "Sword successfully forged!"
     }
     else{
@@ -114,3 +113,4 @@ function makeSword(){
 // 8. Call resetForge() once to start the game.
 resetForge()
 // Use the tests in ASSIGNMENT.md to check your work.
+// Completed testing, and everything seems to be working as intended!!!!!!! :))))
